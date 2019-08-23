@@ -1,2 +1,0 @@
-# Weather-node
-weather-node
