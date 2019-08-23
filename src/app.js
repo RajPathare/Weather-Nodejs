@@ -32,7 +32,7 @@ app.use(express.static(publicDirectoryPath)); // customize the server
 
 app.get('',(req,res)=>{
     res.render('index', {
-        title: 'Weather app',
+        title: 'Weatherlive!',
         name: 'Raj'
     });
 });
@@ -47,7 +47,7 @@ app.get('/about',(req,res)=>{
 
 app.get('/help',(req,res)=>{
     res.render('help',{
-        title: 'Help!',
+        title: 'Working',
         name: 'Raj'
     });
 

@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <title>Help</title>
+    <title>Working</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -11,7 +11,11 @@
 
     <div class="main-content">
         {{>header}}  
-        <p>{{title}}</p>
+        <p>This site uses data from <b>mapbox.com</b> and <b>darksky.net</b>!</p>
+        <p><b>Explanation</b><p>
+
+        </p>When the user types in a location, the string is passed to the mapbox api and we get the lat&long of the desired location. Then, we pass this data to the darksky api to fetch the temperature of the location.</p>
+        <p><b>Geocoding</b> - Geocoding is the process of converting addresses (like a street address) into geographic coordinates (like latitude and longitude), which you can use to place markers on a map, or position the map. <b>Reverse geocoding</b> is the process of converting geographic coordinates into a human-readable address.</p>
     </div>
     
 
