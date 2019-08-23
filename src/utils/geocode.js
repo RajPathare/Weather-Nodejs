@@ -13,7 +13,8 @@ const geocode = (address,callback) => {
     }
     else if(body.features.length === 0)
     {
-      callback('Unable to find location. Try another search..', 'undefined'); //check if we can use undefined or 'undefined'
+      callback('Unable to find location. Try another search..', undefined); //check if we can use undefined or 'undefined'
+                                                             // we used default {lat,longloc} = {} in app.js to solve this issue
     }
     else
     {

@@ -58,8 +58,9 @@ app.get('/weather',(req,res)=>{
             error: 'Please provide an address'
         })
     }
-
-    geocode(req.query.address,(error,{latitude,longitude,location}) => {
+                                                                    // default parameter if nothing is passed 
+                                                                    // similar to setting a default value for a var
+    geocode(req.query.address,(error,{latitude,longitude,location} = {}) => {
         if(error)
         {
             return res.send({
