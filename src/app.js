@@ -6,6 +6,8 @@ const forecast = require('./utils/forecast');
 
 const app = express() // pass the express func to a variable, so we can directly use the var
 
+const port = process.env.PORT || 3000; // heroku uses process.env.PORT variable. If it doesn't exists, choose port 3000
+// to run it on out localhost
 
 // Define paths for express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -126,6 +128,7 @@ app.get('*',(req,res)=>{
 
 })
 
-app.listen(3000, ()=>{
-    console.log("Server is running on port 3000");
+app.listen(port, ()=>{
+    console.log("Server is running on port "+ port);
 });
+
