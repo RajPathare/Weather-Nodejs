@@ -17,7 +17,8 @@ const forecast = (latitude,longitude,callback) => {
         }
         else
         {
-            callback(undefined, body.daily.data[0].summary+" It is "+body.currently.temperature+"C and the precipitation probability is "+body.currently.precipProbability+"%");
+            console.log(body.daily.data[0]);
+            callback(undefined, body.daily.data[0].summary+" It is "+body.currently.temperature+"°C . The high today is "+ body.daily.data[0].temperatureHigh +"°C with a low of "+ body.daily.data[0].temperatureLow +"°C. The precipitation probability is "+body.currently.precipProbability);
         }
     
     
