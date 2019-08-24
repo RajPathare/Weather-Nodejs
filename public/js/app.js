@@ -8,6 +8,12 @@ const search = document.querySelector('input');
 const messageOne = document.querySelector('#message-one');
 const messageTwo = document.querySelector('#message-two');
 const weekMessage = document.querySelector('#week-message');
+const weekMessage1 = document.querySelector('#week-message1');
+const weekMessage2 = document.querySelector('#week-message2');
+const weekMessage3 = document.querySelector('#week-message3');
+const weekMessage4 = document.querySelector('#week-message4');
+const weekMessage5 = document.querySelector('#week-message5');
+const weekMessage6 = document.querySelector('#week-message6');
 
 
 Date.prototype.getDayOfWeek = function(){   
@@ -48,12 +54,19 @@ weatherForm.addEventListener('submit', (e)=>{
     e.preventDefault() // don't refresh the browser when we click on submit
 
     const location = search.value;
+    
 
-    weekMessage.setAttribute('style', 'white-space: pre;');
+    // weekMessage.setAttribute('style', 'white-space: pre;');
 
     messageOne.textContent = 'Loading...';
     messageTwo.textContent = '';
     weekMessage.textContent = '';
+    weekMessage1.textContent = '';
+    weekMessage2.textContent = '';
+    weekMessage3.textContent = '';
+    weekMessage4.textContent = '';
+    weekMessage5.textContent = '';
+    weekMessage6.textContent = '';
 
     fetch('/weather?address='+location).then((response) => {
         response.json().then((data)=> {
@@ -63,14 +76,24 @@ weatherForm.addEventListener('submit', (e)=>{
             }
             else
             {
+
                 messageOne.textContent = data.location;
                 messageTwo.textContent = data.forecast;
-                weekMessage.textContent =d2.getDayOfWeek()+ " - " +data.week[0] + " \r\n\n"
-                weekMessage.textContent +=d3.getDayOfWeek()+ " - " +data.week[1] + " \r\n\n"
-                weekMessage.textContent +=d4.getDayOfWeek()+ " - " +data.week[2] + " \r\n\n"
-                weekMessage.textContent +=d5.getDayOfWeek()+ " - " +data.week[3] + " \r\n\n"
-                weekMessage.textContent +=d6.getDayOfWeek()+ " - " +data.week[4] + " \r\n\n"
-                weekMessage.textContent +=d7.getDayOfWeek()+ " - " +data.week[5] + " \r\n"
+                
+                // weekMessage.textContent =d2.getDayOfWeek()+ " - " +data.week[0] + " \r\n\n"
+                // weekMessage.textContent +=d3.getDayOfWeek()+ " - " +data.week[1] + " \r\n\n"
+                // weekMessage.textContent +=d4.getDayOfWeek()+ " - " +data.week[2] + " \r\n\n"
+                // weekMessage.textContent +=d5.getDayOfWeek()+ " - " +data.week[3] + " \r\n\n"
+                // weekMessage.textContent +=d6.getDayOfWeek()+ " - " +data.week[4] + " \r\n\n"
+                // weekMessage.textContent +=d7.getDayOfWeek()+ " - " +data.week[5] + " \r\n"
+
+                weekMessage.textContent =d2.getDayOfWeek()+ " - " +data.week[0];
+                weekMessage1.textContent =d3.getDayOfWeek()+ " - " +data.week[1];
+                weekMessage2.textContent =d4.getDayOfWeek()+ " - " +data.week[2];
+                weekMessage3.textContent =d5.getDayOfWeek()+ " - " +data.week[3];
+                weekMessage4.textContent =d6.getDayOfWeek()+ " - " +data.week[4];
+                weekMessage5.textContent =d7.getDayOfWeek()+ " - " +data.week[5];
+                
                
             }
         })

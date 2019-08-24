@@ -33,7 +33,7 @@ app.use(express.static(publicDirectoryPath)); // customize the server
 app.get('',(req,res)=>{
     res.render('index', {
         title: 'Weatherlive!',
-        name: 'Raj'
+        name: 'Raj',
     });
 });
 
