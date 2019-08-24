@@ -70,7 +70,7 @@ app.get('/weather',(req,res)=>{
             })
         }
 
-        forecast(latitude,longitude,(error,forecastData)=>{
+        forecast(latitude,longitude,(error,forecastData,tom)=>{
             if(error)
             {
                 return res.send({
@@ -81,7 +81,8 @@ app.get('/weather',(req,res)=>{
             res.send({
                 forecast: forecastData,
                 location, // similar to location: location (new style)
-                address: req.query.address
+                address: req.query.address,
+                week: tom
 
             })
 
