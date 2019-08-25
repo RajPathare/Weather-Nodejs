@@ -3,25 +3,38 @@
 <html>
 <head>
     <title>About me</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/style2.css"> 
     <style>
-        a {
-             color: #888888;
-            text-decoration: none; 
+        p a {
+            margin-right: 0px;
         }
+        img {
+           float: left;
+            }
     </style>
 </head>
 
 <body>
     {{!-- comes from header.hbs (partial) --}}
-    <div class="main-content">
-        {{>header}}
-        <p>What's up dear visiter. I'm Raj Pathare , an IT student who spends his most of the time surfing on the web for finding something unusual . Glad to see you here!
+       {{>header}}
+    <div class="container">
+        <p><img src="img/steinsgate.jpg" alt="Pineapple" style="width:170px;height:170px;margin-right:15px;">
+What's up dear visiter. I'm Raj Pathare, an IT student who spends his most of the time surfing on the web for finding something unusual. Glad to see you here!
 
-Contact me on <a href="https://www.linkedin.com/in/rajpathare/">Linkedin</a> if you wanna know more ! Thank you.</p>
-        <img class="portrait" src="img/steinsgate.jpg">
+Currently, I'm working as an Associate Software Developer at Reliance Jio. I've done my Bacherlor's of Engineering in Information Technology from D.Y. Patil University. My journey as a developer started since I joined my college. Web Development was the first thing that crossed my mind. I took some online courses and started working on android later on.
+
+I love playing video games in my free time. I was always intrigued about how such cool games are really made. I've been working on Unity (a game engine) for 2 years.
+
+Ping me up if you want to know more! 
+
+You can find me on <a href="https://www.linkedin.com/in/rajpathare/" style="color:gray">Linkedin</a> or <a href="https://github.com/RajPathare/" style="color:gray">Github</a> Thank you.</p>
+        
     </div>
-    
 
     {{>footer}}
 

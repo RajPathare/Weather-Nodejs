@@ -3,18 +3,28 @@
 <html>
 <head>
     <title>Working</title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./css/style2.css"> 
+    <style>
+        p a {
+            margin-right: 0px;
+        }
+    </style>
 </head>
 
 <body>
     {{!-- comes from header.hbs (partial) --}}
 
-    <div class="main-content">
+    <div class="container">
         {{>header}}  
         <p>This site uses data from <b>mapbox.com</b> and <b>darksky.net</b>!</p>
-        <p><b>Explanation</b><p>
+        <p><b>Explanation</b></p>
 
-        </p>When the user types in a location, the string is passed to the mapbox api and we get the lat&long of the desired location. Then, we pass this data to the darksky api to fetch the temperature of the location.</p>
+        <p>When the user types in a location, the string is passed to the mapbox api and we get the lat&long of the desired location. Then, we pass this data to the darksky api to fetch the temperature of the location.</p>
         <p><b>Geocoding</b> - Geocoding is the process of converting addresses (like a street address) into geographic coordinates (like latitude and longitude), which you can use to place markers on a map, or position the map. <b>Reverse geocoding</b> is the process of converting geographic coordinates into a human-readable address.</p>
     </div>
     
@@ -25,3 +35,4 @@
 
 </body>
 </html>
+
