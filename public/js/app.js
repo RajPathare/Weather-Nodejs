@@ -16,33 +16,80 @@ const weekMessage5 = document.querySelector('#week-message5');
 const weekMessage6 = document.querySelector('#week-message6');
 
 
-Date.prototype.getDayOfWeek = function(){   
-    return ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][ this.getDay() ];
-};
+// Date.prototype.getDayOfWeek = function(){   
+//     return ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][ this.getDay() ];
+// };
 
-var d1=new Date();
-var d2=new Date();
-var d3=new Date();
-var d4=new Date();
-var d5=new Date();
-var d6=new Date();
-var d7=new Date();
+// var d1=new Date();
+// var d2=new Date();
+// d2.setDate(d1.getDate()+1);
+// var d3=new Date();
+// d3.setDate(d2.getDate()+1);
+// var d4=new Date();
+// d4.setDate(d3.getDate()+1);
+// var d5=new Date();
+// d5.setDate(d4.getDate()+1);
+// var d6=new Date();
+// d6.setDate(d5.getDate()+1);
+// var d7=new Date();
+// d7.setDate(d6.getDate()+1);
 
-d2.setDate(d1.getDate()+1);
-d3.setDate(d2.getDate()+1);
-d4.setDate(d3.getDate()+1);
-d5.setDate(d4.getDate()+1);
-d6.setDate(d5.getDate()+1);
-d7.setDate(d6.getDate()+1);
+var my_day=new Date()
+console.log(my_day)
 
 
-console.log(d1.getDayOfWeek());
-console.log(d2.getDayOfWeek());
-console.log(d3.getDayOfWeek());
-console.log(d4.getDayOfWeek());
-console.log(d5.getDayOfWeek());
-console.log(d6.getDayOfWeek());
-console.log(d7.getDayOfWeek());
+var day_name=new Array(14);
+
+day_name[0]='Sunday'
+day_name[1]='Monday'
+day_name[2]='Tuesday'
+day_name[3]='Wednesday'
+day_name[4]='Thursday'
+day_name[5]='Friday'
+day_name[6]='Saturday'
+day_name[7]='Sunday'
+day_name[8]='Monday'
+day_name[9]='Tuesday'
+day_name[10]='Wednesday'
+day_name[11]='Thursday'
+day_name[12]='Friday'
+day_name[13]='Saturday'
+
+
+
+
+console.log(day_name[my_day.getDay()],my_day.getDay());
+console.log(day_name[my_day.getDay()+1],my_day.getDay()+1);
+console.log(day_name[my_day.getDay()+2],my_day.getDay()+2);
+console.log(day_name[my_day.getDay()+3],my_day.getDay()+3);
+console.log(day_name[my_day.getDay()+4],my_day.getDay()+4);
+console.log(day_name[my_day.getDay()+5],my_day.getDay()+5);
+console.log(day_name[my_day.getDay()+6],my_day.getDay()+6);
+
+
+
+// d5.setDate(d4.getDate()+1);
+// d6.setDate(d5.getDate()+1);
+// d7.setDate(d6.getDate()+1);
+
+// console.log(d1);
+// console.log(d2);
+// console.log(d3);
+// console.log(d4);
+// console.log(d5);
+// console.log(d6);
+// console.log(d7);
+
+
+
+
+// console.log(d1.getDayOfWeek());
+// console.log(d2.getDayOfWeek());
+// console.log(d3.getDayOfWeek());
+// console.log(d4.getDayOfWeek());
+// console.log(d5.getDayOfWeek());
+// console.log(d6.getDayOfWeek());
+// console.log(d7.getDayOfWeek());
 
 
 
