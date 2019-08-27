@@ -134,12 +134,12 @@ weatherForm.addEventListener('submit', (e)=>{
                 // weekMessage.textContent +=d6.getDayOfWeek()+ " - " +data.week[4] + " \r\n\n"
                 // weekMessage.textContent +=d7.getDayOfWeek()+ " - " +data.week[5] + " \r\n"
 
-                weekMessage.textContent =d2.getDayOfWeek()+ " - " +data.week[0];
-                weekMessage1.textContent =d3.getDayOfWeek()+ " - " +data.week[1];
-                weekMessage2.textContent =d4.getDayOfWeek()+ " - " +data.week[2];
-                weekMessage3.textContent =d5.getDayOfWeek()+ " - " +data.week[3];
-                weekMessage4.textContent =d6.getDayOfWeek()+ " - " +data.week[4];
-                weekMessage5.textContent =d7.getDayOfWeek()+ " - " +data.week[5];
+                weekMessage.textContent = day_name[my_day.getDay()+1]+ " - " +data.week[0];
+                weekMessage1.textContent =day_name[my_day.getDay()+2]+ " - " +data.week[1];
+                weekMessage2.textContent =day_name[my_day.getDay()+3]+ " - " +data.week[2];
+                weekMessage3.textContent =day_name[my_day.getDay()+4]+ " - " +data.week[3];
+                weekMessage4.textContent =day_name[my_day.getDay()+5]+ " - " +data.week[4];
+                weekMessage5.textContent =day_name[my_day.getDay()+6]+ " - " +data.week[5];
                 
                
             }
